@@ -60,7 +60,35 @@ const getAllproduct = (req, res) => {
             });
         });
 };
+
+const getProductById = (req, res) => {
+    let id = req.params.id;
+    productModel
+        .findById(id)
+        .populate("User")
+        .exec()
+        .then((results) => {
+            if (!results) {
+                return res.status(404).json({
+                    success: false,
+                    massege: `The product with id => ${id} not found`,
+                })
+            }
+            res.status(200).json({
+                success: true,
+                massege: `the product ${id}`,
+                product: results,
+            });
+        }).catch((err) => {
+            res.status(500).json({
+                success: false,
+                massege: "server error",
+                err: err.massege,
+            });
+        });
+};
 module.exports = {
     createNewProduct,
     getAllproduct,
+    getProductById,
 }
