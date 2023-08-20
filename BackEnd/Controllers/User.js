@@ -5,14 +5,14 @@ const jwt = require("jsonwebtoken");
 // Function To create New User .
 
 const signUp = (req, res) => {
-    const { firstName, lastName, age, email, password } = req.body;
+    const { firstName, lastName, age, email, password,role } = req.body;
     const User = new UserModel({
         firstName,
         lastName,
         age,
         email,
         password,
-        //role: inter the id of role .
+        role,
     });
 
     User
@@ -21,19 +21,15 @@ const signUp = (req, res) => {
             res.status(200).json({
                 success: true,
                 message: "Account Created Successfully",
-                User: `the new ${results}`,
+                User: `the new ${results.firstName} `,
             })
         }).catch((err) => {
-            res.Status(409).json({
+            res.status(409).json({
                 success: false,
-                message: "The email already exists"
+                message: "The email already exists",
+                err:err.massege
             });
         })
-    res.status(500).json({
-        success: false,
-        massege: "server error",
-        err: err.massege,
-    })
 };
 
 
