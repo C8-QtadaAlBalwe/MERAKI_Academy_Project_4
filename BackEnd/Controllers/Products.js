@@ -1,3 +1,4 @@
+const { json } = require("express");
 const productModel = require("../Models/ProductsSchema");
 
 // Function To Create New Product .
@@ -29,6 +30,37 @@ const createNewProduct = (req, res) => {
         })
 
 }
+
+// function TO Get ALL products.
+const getAllproduct = (req, res) => {
+    const UserId = req.token.userId;
+    productModel
+        .find()
+        .populate("firstName")
+        .exec()
+        .then((results) => {
+            if (results.length) {
+                res.status(200).json({
+                    success: true,
+                    massege: "all  the products",
+                    userId: UserId,
+                    products: results,
+                });
+            } else {
+                res.status(200).json({
+                    success: false,
+                    massege: "No There Any Products"
+                });
+            }
+        }).catch((err) => {
+            res.status(500), json({
+                success: false,
+                massege: "Server Error",
+                err: err.massege,
+            });
+        });
+};
 module.exports = {
-    createNewProduct
+    createNewProduct,
+    getAllproduct,
 }

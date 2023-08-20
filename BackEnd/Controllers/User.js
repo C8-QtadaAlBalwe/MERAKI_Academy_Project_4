@@ -52,6 +52,7 @@ const login = (req, res) => {
                     massege: `The email doesn't exist or The password you’ve entered is incorrect`,
                 });
             }
+
             try {
                 const validation = bcrypt.compare(password, results.password);
                 if (!validation) {
@@ -60,16 +61,35 @@ const login = (req, res) => {
                         massege: `The email doesn't exist or The password you’ve entered is incorrect`,
                     })
                 }
+                const payload = {
+                    userId: results._id,
+                    user: results.firstName,
+                    role: results.role,
+                    age: results.age,
+                };
+
+                const options = {
+                    expiresIn: "60m",
+                };
+
+                const token = jwt.sign(payload, process.env.SECRET, options);
                 res.status(200).json({
                     success: true,
-                    message: "Valid login credentials"
+                    message: "Valid login credentials",
+                    token:token,
                 })
-  
+
             } catch (err) {
                 throw new Error(err.massege)
             }
+        }).catch((err) => {
+            res.status(500).json({
+                success: false,
+                massege: "server Error",
+                err: err.massege,
+            })
         })
-  }
+}
 module.exports = {
     signUp,
     login
