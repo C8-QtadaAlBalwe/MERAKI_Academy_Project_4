@@ -36,6 +36,41 @@ const signUp = (req, res) => {
     })
 };
 
+
+// Function To check on User.
+
+const login = (req, res) => {
+    const password = req.body.password;
+    const email = req.body.email;
+    UserModel
+        .findOne({ email })
+        .populate("role", "-_id -__v")
+        .then((results) => {
+            if (!results) {
+                return res.status(403).json({
+                    success: false,
+                    massege: `The email doesn't exist or The password you’ve entered is incorrect`,
+                });
+            }
+            try {
+                const validation = bcrypt.compare(password, results.password);
+                if (!validation) {
+                    res.status(403).json({
+                        success: false,
+                        massege: `The email doesn't exist or The password you’ve entered is incorrect`,
+                    })
+                }
+                res.status(200).json({
+                    success: true,
+                    message: "Valid login credentials"
+                })
+  
+            } catch (err) {
+                throw new Error(err.massege)
+            }
+        })
+  }
 module.exports = {
-    signUp
+    signUp,
+    login
 }
