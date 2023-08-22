@@ -5,7 +5,7 @@ const ProductSchema = new mongoose.Schema({
   price: { type: Number },
   colors: [{ type: String }],
   size: [{ type: String }],
-  User: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
+  User: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
 });
 
 module.exports = mongoose.model("Product", ProductSchema);

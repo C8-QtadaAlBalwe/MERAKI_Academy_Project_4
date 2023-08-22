@@ -5,13 +5,13 @@ require("./Models/DataBase");
 const PORT = process.env.PORT
 
 
+app.use(express.json());
 // Imprort Routers .
 const UserRouter = require("./Routes/User");
 const RoleRouter = require("./Routes/Role");
 const ProductRouter = require("./Routes/Products");
 const CartRouter = require("./Routes/Cart");
 
-app.use(express.json());
 
 // Routers MiddleWare .
 app.use("/users",UserRouter);

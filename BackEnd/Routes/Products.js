@@ -8,7 +8,7 @@ const authentication= require("../middileware/authentication")
 const ProductRouter = express.Router();
 
 // req operaters place .
-ProductRouter.post("/",createNewProduct);
+ProductRouter.post("/",authentication,createNewProduct);
 ProductRouter.get("/",authentication,getAllproduct);
 ProductRouter.get("/search_2/:id",getProductById);
 module.exports = ProductRouter;

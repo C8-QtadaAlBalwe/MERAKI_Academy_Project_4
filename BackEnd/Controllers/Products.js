@@ -4,7 +4,8 @@ const productModel = require("../Models/ProductsSchema");
 // Function To Create New Product .
 
 const createNewProduct = (req, res) => {
-  const { nameProduct, ImgSrc, price, colors, size, User } = req.body;
+  const { nameProduct, ImgSrc, price, colors, size } = req.body;
+  const User = req.token.userId;
   const NewProduct = new productModel({
     nameProduct,
     ImgSrc,
@@ -18,7 +19,7 @@ const createNewProduct = (req, res) => {
       res.status(201).json({
         success: true,
         message: "Product created",
-        product: `the new product you created`,
+        product: `the new ${nameProduct} you created`,
       });
     })
     .catch((err) => {
@@ -32,8 +33,10 @@ const createNewProduct = (req, res) => {
 
 // function TO Get ALL products.
 const getAllproduct = (req, res) => {
+  
   productModel
     .find()
+    .populate(["price","size","colors"])
     .exec()
     .then((results) => {
       if (results.length) {
@@ -41,6 +44,7 @@ const getAllproduct = (req, res) => {
           success: true,
           massege: "all  the products",
           results: results,
+    
         });
       } else {
         res.status(200).json({
