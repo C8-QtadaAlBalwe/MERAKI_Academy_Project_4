@@ -22,4 +22,30 @@ const createNewRole = (req, res) => {
             });
         });
 };
-module.exports={createNewRole};
+const getAllRole = (req,res)=>{
+    RoleModel
+    .find()
+    .exec()
+    .then((results)=>{
+        if(results.length){
+            res.status(200).json({
+                success:true,
+                massege:"All Of Roles",
+                roles:results
+            })}else{
+                res.status(200).json({
+                    success:true,
+                    massege:"No roles there yet"
+                })
+
+            }
+        
+        }).catch((err)=>{
+            res.status(500).json({
+                success:false,
+                massage:"server error",
+                err:err.massege
+            })
+        })
+    }
+module.exports={createNewRole,getAllRole};
