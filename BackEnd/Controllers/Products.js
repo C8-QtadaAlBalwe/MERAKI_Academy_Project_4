@@ -36,7 +36,7 @@ const getAllproduct = (req, res) => {
   const User = req.token.userId;
   productModel
     .find()
-    .populate(["price","size","colors"])
+    .populate(["price", "size", "colors"])
     .exec()
     .then((results) => {
       if (results.length) {
