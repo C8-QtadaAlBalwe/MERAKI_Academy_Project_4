@@ -58,7 +58,10 @@ const login = (req, res) => {
         const payload = {
           userId: results._id,
           age: results.age,
+          role:results.role
         };
+        // check value payload
+        console.log(payload)
 
         const options = {
           expiresIn: "60m",
