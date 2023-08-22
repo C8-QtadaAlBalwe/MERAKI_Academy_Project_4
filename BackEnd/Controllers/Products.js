@@ -33,7 +33,7 @@ const createNewProduct = (req, res) => {
 
 // function TO Get ALL products.
 const getAllproduct = (req, res) => {
-  
+  const User = req.token.userId;
   productModel
     .find()
     .populate(["price","size","colors"])
@@ -44,7 +44,7 @@ const getAllproduct = (req, res) => {
           success: true,
           massege: "all  the products",
           results: results,
-    
+          User,
         });
       } else {
         res.status(200).json({
