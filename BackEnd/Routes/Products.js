@@ -15,7 +15,7 @@ const ProductRouter = express.Router();
 ProductRouter.post(
   "/",
   authentication,
-  authorization(["MANAGE_USERS", "CREATE_PRODUCTS", "SHOOPING"]),
+  authorization( "CREATE_PRODUCTS"),
   createNewProduct
 );
 ProductRouter.get("/", authentication, getAllproduct);
