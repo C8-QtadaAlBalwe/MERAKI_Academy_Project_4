@@ -1,10 +1,11 @@
 import './App.css';
-
-
+import SignUp from './Components/Sign-Up/Sign-Up';
+import Login from './Components/Login/Login';
 function App() {
   return (
-<div>
-  <h1>hello qtada</h1>
+<div className='App'>
+  <SignUp/>
+  <Login/>
 </div>
   
   );

@@ -1,0 +1,27 @@
+.sign-app{
+    width: 100%;
+    height: 100vh;
+}
+
+
+.sign-up-cart{
+    width: 45%;
+    height: 50%;
+    background-color: aliceblue;
+    margin: 30px auto ;
+}
+.sign-up-cart input{
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+}
+.sign-up-cart button{
+    width: 180px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: blue;
+    color: aliceblue;
+    font-size: large;
+    font-weight: bold;
+}
