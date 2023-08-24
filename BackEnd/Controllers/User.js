@@ -12,7 +12,7 @@ const signUp = (req, res) => {
     age,
     email,
     password,
-    role:"64e27a283068ab53bec206a5"
+    role:"64e3aee14e0f6d5565ac2f66"
   });
 
   User.save()

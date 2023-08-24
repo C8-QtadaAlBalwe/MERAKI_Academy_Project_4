@@ -13,13 +13,13 @@ const CartRouter = express.Router();
 CartRouter.post(
   "/",
   authentication,
-  authorization("SHOPPING"),
+  authorization("SHOOPING"),
   addProductToCart
 );
 CartRouter.delete(
   "/:id",
   authentication,
-  authorization("SHOPPING"),
+  authorization("SHOOPING"),
   deletePrductFromCart
 );
 module.exports = CartRouter;

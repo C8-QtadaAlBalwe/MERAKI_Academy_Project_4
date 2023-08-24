@@ -3,18 +3,17 @@ const cartModel = require("../Models/CartSchema");
 // Function To Add Product To shopping Cart .
 
 const addProductToCart = (req, res) => {
-  const { user, role, product } = req.body;
+  const { user,productId } = req.body;
   const productAdded = new cartModel({
     user,
-    role,
-    product,
+    productId ,
   });
   productAdded
     .save()
     .then((results) => {
       res.status(201).json({
         success: true,
-        massege: `product added ${product}`,
+        massege: `product added ${productId}`,
         product: results,
       });
     })
