@@ -1,10 +1,11 @@
 import axios from "axios";
-import React,{useState} from "react";
+import React,{useState,useContext} from "react";
+import { UserContext } from "../../App";
 import "../Sign-Up/Sign-Style.css";
 const Login=()=>{
     const [email,setEmail]=useState("");
     const[password,setPassword]=useState("");
-    const[token,setToken]=useState("");
+    const {token,setToken}=useContext(UserContext)
     const [massege,setMassege]=useState("")
     return(
     <>
@@ -15,6 +16,7 @@ const Login=()=>{
         <button onClick={(e)=>{
             axios.post("http://localhost:5000/users/login",{email,password}).then((result)=>{
                 setToken(result.data.token)
+                 localStorage.setItem("token",token)
             }).catch((err)=>{
                 setMassege("You need to create account !!")
             });

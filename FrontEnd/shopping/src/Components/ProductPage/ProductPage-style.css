@@ -1,0 +1,28 @@
+.pageProduct{
+    width: 100%;
+    height: 100vh;
+    background-color: antiquewhite;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.product{
+    width: 40%;
+    height: 60%;
+    background-color: blueviolet;
+    border: 2px #000;
+}
+
+.imgProduct{
+    width: 100%;
+    height: 30%;
+}
+.imgProduct img{
+    width: 100%;
+    height: 100%;
+}
+.product button{
+    width: 50%;
+    padding: 25px;
+    margin: auto;
+    background-color: greenyellow;
+}
