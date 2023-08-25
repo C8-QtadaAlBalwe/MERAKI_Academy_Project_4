@@ -50,4 +50,33 @@ const deletePrductFromCart = (req, res) => {
       });
     });
 };
-module.exports = { addProductToCart, deletePrductFromCart };
+
+const getAllCartPordduct=(req,res)=>{
+  cartModel
+    .find()
+    .exec()
+    .then((results) => {
+      if (results.length) {
+        res.status(200).json({
+          success: true,
+          massege: "all  the products in Cart",
+          results: results,
+        });
+      } else {
+        res.status(200).json({
+          success: false,
+          massege: "No There Any Products in cart",
+        });
+      }
+    })
+    .catch((err) => {
+      res.status(500),
+        json({
+          success: false,
+          massege: "Server Error",
+          err: err.massege,
+        });
+    });
+
+}
+module.exports = { addProductToCart, deletePrductFromCart ,getAllCartPordduct };

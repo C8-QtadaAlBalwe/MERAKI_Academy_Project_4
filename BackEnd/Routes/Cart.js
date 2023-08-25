@@ -2,6 +2,7 @@ const express = require("express");
 const {
   addProductToCart,
   deletePrductFromCart,
+  getAllCartPordduct,
 } = require("../Controllers/Cart");
 
 // MiddileWare
@@ -16,10 +17,18 @@ CartRouter.post(
   authorization("SHOOPING"),
   addProductToCart
 );
+
+CartRouter.get(
+  "/",
+  authentication,
+  getAllCartPordduct
+);
+
 CartRouter.delete(
   "/:id",
   authentication,
   authorization("SHOOPING"),
   deletePrductFromCart
 );
+
 module.exports = CartRouter;
