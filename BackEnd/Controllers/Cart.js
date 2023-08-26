@@ -3,17 +3,21 @@ const cartModel = require("../Models/CartSchema");
 // Function To Add Product To shopping Cart .
 
 const addProductToCart = (req, res) => {
-  const { user,productId } = req.body;
+  const { colors, size, quantity, price, nameProduct, img } = req.body;
   const productAdded = new cartModel({
-    user,
-    productId ,
+    colors,
+    size,
+    quantity,
+    price,
+    nameProduct,
+    img,
   });
   productAdded
     .save()
     .then((results) => {
       res.status(201).json({
         success: true,
-        massege: `product added ${productId}`,
+        massege: `product added ${nameProduct}`,
         product: results,
       });
     })
@@ -51,7 +55,7 @@ const deletePrductFromCart = (req, res) => {
     });
 };
 
-const getAllCartPordduct=(req,res)=>{
+const getAllCartPordduct = (req, res) => {
   cartModel
     .find()
     .exec()
@@ -77,6 +81,5 @@ const getAllCartPordduct=(req,res)=>{
           err: err.massege,
         });
     });
-
-}
-module.exports = { addProductToCart, deletePrductFromCart ,getAllCartPordduct };
+};
+module.exports = { addProductToCart, deletePrductFromCart, getAllCartPordduct };

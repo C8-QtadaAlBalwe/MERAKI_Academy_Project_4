@@ -18,7 +18,7 @@ const Login=()=>{
         <button onClick={(e)=>{
             axios.post("http://localhost:5000/users/login",{email,password}).then((result)=>{
                 setToken(result.data.token)
-                 localStorage.setItem("token",token);
+                 localStorage.setItem("token",result.data.token);
                  navigate("/Products")
 
             }).catch((err)=>{

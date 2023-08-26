@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from "react";
-
 import axios from "axios";
 import { UserContext } from "../../App";
 import "./ProductPage-style.css";
@@ -32,30 +31,30 @@ const ProductPage = () => {
           product.map((pro, i) => {
             return (
               <>
-                <div className="product">
+                <div className="product-item">
                   <div className="imgProduct">
                     <img src={pro.ImgSrc} />
                   </div>
                   <h1>{pro.nameProduct}</h1>
                   <h2>
-                    price<span>{pro.price} $</span>
+                    price <span>{pro.price} $</span>
                   </h2>
                   <h2>Size</h2>
-                  <button
+                  <button value={pro.size[0]}
                     onClick={(e) => {
                       setSize(e.target.value);
                     }}
                   >
                     {pro.size[0]}
                   </button>
-                  <button
+                  <button value={pro.size[1]}
                     onClick={(e) => {
                       setSize(e.target.value);
                     }}
                   >
                     {pro.size[1]}
                   </button>
-                  <button
+                  <button value={pro.size[2]}
                     onClick={(e) => {
                       setSize(e.target.value);
                     }}
@@ -63,21 +62,21 @@ const ProductPage = () => {
                     {pro.size[2]}
                   </button>
                   <h2>colors</h2>
-                  <button
+                  <button value={pro.colors[0]}
                     onClick={(e) => {
                       setColors(e.target.value);
                     }}
                   >
                     {pro.colors[0]}
                   </button>
-                  <button
+                  <button value={pro.colors[1]}
                     onClick={(e) => {
                       setColors(e.target.value);
                     }}
                   >
                     {pro.colors[1]}
                   </button>
-                  <button
+                  <button value={pro.colors[2]}
                     onClick={(e) => {
                       setColors(e.target.value);
                     }}
@@ -92,7 +91,7 @@ const ProductPage = () => {
                     }}
                   />
 
-                  <button
+                  <button 
                     onClick={ () => {
                       const nameProduct = pro.nameProduct;
                       const img = pro.ImgSrc;
