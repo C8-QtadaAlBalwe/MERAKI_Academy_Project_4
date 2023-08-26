@@ -1,0 +1,72 @@
+.navbar{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(147, 26, 30);
+    display: flex;
+    position: relative;
+}
+.navbar img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top:5px;
+    left: 90px;
+}
+.navbar h2{
+    position: absolute;
+    top: -5px;
+    left: 160px;
+    color:rgb(187, 218, 9);
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.buttons-nav{
+    width: 50%;
+    position: absolute;
+    top: 15px;
+    left:700px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.link{
+    color:rgb(187, 218, 9);
+    text-decoration: none;
+    font-size: large;
+    font-weight: bolder;
+    transition: .4s ease;
+}
+.link:hover{
+    transform: scale(1.1);
+}
+.sign-up-none{
+    display: none;
+}
+.sign-up-display{
+    display: inline;
+    color:rgb(187, 218, 9);
+    text-decoration: none;
+    font-size: large;
+    font-weight: bolder;
+    transition:  .4s ease;
+}
+.Login-display{
+    display: inline;
+    color:rgb(187, 218, 9);
+    text-decoration: none;
+    font-size: large;
+    font-weight: bolder;
+    transition: .4s ease;
+}
+.login-none{
+    display: none;
+}
+.Login-display:hover{
+    transform: scale(1.1);
+} 
+
+.sign-up-display:hover{
+transform: scale(1.1);
+}

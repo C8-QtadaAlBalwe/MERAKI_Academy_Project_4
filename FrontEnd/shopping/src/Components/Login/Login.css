@@ -1,0 +1,53 @@
+.Login-cart{
+    width: 400px;
+    height: 400px;
+    background-color: aliceblue;
+    margin: 80px auto;
+    border-radius: 30px;
+    box-shadow: 1px 1px 1px 1px #444;
+}
+.Login-cart h1{
+text-align: center;
+color: brown;
+font-family: sans-serif;
+}
+.Login-cart input{
+    display: block;
+    width: 80%;
+    padding: 20px;
+    margin:50px auto 5px auto;
+    border: none;
+    border-radius: 15px;
+}
+::placeholder {
+    color:brown;
+    opacity: .9;
+    font-weight: bolder;
+  }
+
+  .Login-cart button{
+    margin:20px 0 0 140px ;
+    width: 120px;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color:brown;
+    font-size: large;
+    font-weight: bolder;
+    font-family: sans-serif;
+    color: rgb(226, 229, 8);
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    }
+    .sign-up-cart button:hover{
+        transform: scale(1.1);
+    }
+
+    .Login-cart p{
+        width: 100%;
+        height: 35px;
+        color: red;
+        font-size: large;
+        font-weight: bold;
+        text-align: center;
+    }

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Sign-Style.css";
+import { useNavigate } from "react-router-dom";
 const SignUp = () => {
+  const navigate = useNavigate();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [age, setAge] = useState("");
@@ -10,8 +12,8 @@ const SignUp = () => {
   const [User, setUser] = useState("");
   return (
     <>
-      <div className="sign-app">
         <div className="sign-up-cart">
+          <h1>Create Account</h1>
           <input
             type="text"
             placeholder="First Name"
@@ -59,6 +61,7 @@ const SignUp = () => {
                   password,
                 });
                 console.log(result);
+                navigate("/Login")
               } catch (error) {
                 console.log(error);
               }
@@ -67,7 +70,6 @@ const SignUp = () => {
             Sign-Up
           </button>
         </div>
-      </div>
     </>
   );
 };
