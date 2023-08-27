@@ -21,7 +21,22 @@
     font-weight: bold;
     font-family: sans-serif;
 }
+.navbar h1{
+    position: absolute;
+    top: -30px;
+    right:-70px;
+    color:rgb(187, 218, 9);
+    font-weight: bold;
+    font-family: sans-serif;
+}
 
+.navbar h1 img{
+    position: absolute;
+    left: -50px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
 .buttons-nav{
     width: 50%;
     position: absolute;
@@ -39,6 +54,16 @@
     transition: .4s ease;
 }
 .link:hover{
+    transform: scale(1.1);
+}
+.link1{
+    color:rgb(187, 218, 9);
+    text-decoration: none;
+    font-size: large;
+    font-weight: bolder;
+    transition: .4s ease;
+}
+.link1:hover{
     transform: scale(1.1);
 }
 .sign-up-none{
@@ -70,3 +95,19 @@
 .sign-up-display:hover{
 transform: scale(1.1);
 }
+.divs-Bar{
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.button-logout{
+    background-color: transparent;
+    color:rgb(187, 218, 9);
+    font-size: large;
+    font-weight: bolder;
+    transition: .4s ease;
+    border: none;
+}
+.button-logout:hover{
+    transform: scale(1.1);
+    }

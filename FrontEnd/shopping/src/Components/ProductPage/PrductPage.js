@@ -37,8 +37,9 @@ const ProductPage = () => {
                   </div>
                   <h1>{pro.nameProduct}</h1>
                   <h2>
-                    price <span>{pro.price} $</span>
+                    price : <span>{pro.price} $</span>
                   </h2>
+                  <div className="line"></div>
                   <h2>Size</h2>
                   <button value={pro.size[0]}
                     onClick={(e) => {
@@ -61,6 +62,7 @@ const ProductPage = () => {
                   >
                     {pro.size[2]}
                   </button>
+                  <div className="line"></div>
                   <h2>colors</h2>
                   <button value={pro.colors[0]}
                     onClick={(e) => {
@@ -83,6 +85,7 @@ const ProductPage = () => {
                   >
                     {pro.colors[2]}
                   </button>
+                  <div className="line"></div>
                   <input
                     type="number"
                     placeholder="quantity"
@@ -90,8 +93,9 @@ const ProductPage = () => {
                       setQuantity(e.target.value);
                     }}
                   />
+                  <div className="line"></div>
 
-                  <button 
+                  <button  className="buy-button"
                     onClick={ () => {
                       const nameProduct = pro.nameProduct;
                       const img = pro.ImgSrc;

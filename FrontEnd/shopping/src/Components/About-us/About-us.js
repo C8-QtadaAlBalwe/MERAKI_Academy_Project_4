@@ -2,8 +2,8 @@ import "../About-us/About-us-style.css"
 const AboutUs = () => {
   return (
     <>
-      <div className="About-us">
-        <div className="TITLE"><h1>About Our App</h1></div>
+      <div className="About-app">
+        <div className="title"><h1>About Our App</h1></div>
         <span>
           Online shopping is a form of electronic commerce which allows
           consumers to directly buy goods or services from a seller over the
