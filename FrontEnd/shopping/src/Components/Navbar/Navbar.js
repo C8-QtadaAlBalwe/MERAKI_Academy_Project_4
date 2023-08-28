@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
-import { Routes, Route, Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { UserContext } from "../../App";
 import { useNavigate } from "react-router-dom";
-import "./Navbar-style.css"
+import "./Navbar-style.css";
 const Navigation = () => {
   const navigate = useNavigate();
   const [login, setModelogin] = useState({ display: true, none: false });
-  const [sign, setsign] = useState({ display: true, none: false })
-  const { token, firstName,setToken,setCart } = useContext(UserContext);
+  const [sign, setsign] = useState({ display: true, none: false });
+  const { token, firstName, setToken, setCart } = useContext(UserContext);
 
   return (
     <>
@@ -15,34 +15,65 @@ const Navigation = () => {
         <img src="https://www.360webdesigns.com/wp-content/uploads/2016/07/Services_ECommerce_v2-01.png" />
         <h2>Shopping App</h2>
         <div className="buttons-nav">
-        <Link to="/Contact-Us" className="link">Contact-US</Link>
-        <Link to="/About-us" className="link">About-Us</Link>
-        {token ? (
-         <div className="divs-Bar">
-            <h1><img src="https://th.bing.com/th/id/OIP.8hjfJpy1QT2Z3VnoVCkAUQHaHa?pid=ImgDet&rs=1" />{firstName}</h1>
-            <Link to="/Products" className="link">Products</Link>
-            <button  className="button-logout" onClick={()=>{
-              localStorage.clear()
-              setToken("")
-              setCart([])
-              navigate("/sign")
-            }}>Logout</button>
-          </div>
-        ) : <div className="divs-Bar">
-          <Link to="/sign" className={`${login.display ? "sign-up-display" : "sign-up-none"}`} onClick={() => {
-            setModelogin((login) => {
-              return { display: !login.display, none: !login.none }
-            })
-          }}>SignUp</Link>
-          <Link to="/Login" className={`${sign.display ? "Login-display" : "login-none"}`} onClick={() => {
-            setsign((sign) => {
-              return { display: !sign.display, none: !sign.none }
-            })
-          }}>Login</Link>
-          </div>
-        }
-          
-      </div>
+          <Link to="/Contact-Us" className="link">
+            Contact-US
+          </Link>
+          <Link to="/About-us" className="link">
+            About-Us
+          </Link>
+          {token ? (
+            <div className="divs-Bar">
+              <h1>
+                <img src="https://th.bing.com/th/id/OIP.8hjfJpy1QT2Z3VnoVCkAUQHaHa?pid=ImgDet&rs=1" />
+                {firstName}
+              </h1>
+              <Link to="/Products" className="link">
+                Products
+              </Link>
+              <Link to="/Cart" className="link">
+                Shopping Cart
+              </Link>
+              <button
+                className="button-logout"
+                onClick={() => {
+                  localStorage.clear();
+                  setToken("");
+                  setCart([]);
+                  navigate("/sign");
+                }}
+              >
+                Logout
+              </button>
+            </div>
+          ) : (
+            <div className="divs-Bar">
+              <Link
+                to="/sign"
+                className={`${
+                  login.display ? "sign-up-display" : "sign-up-none"
+                }`}
+                onClick={() => {
+                  setModelogin((login) => {
+                    return { display: !login.display, none: !login.none };
+                  });
+                }}
+              >
+                SignUp
+              </Link>
+              <Link
+                to="/Login"
+                className={`${sign.display ? "Login-display" : "login-none"}`}
+                onClick={() => {
+                  setsign((sign) => {
+                    return { display: !sign.display, none: !sign.none };
+                  });
+                }}
+              >
+                Login
+              </Link>
+            </div>
+          )}
+        </div>
       </div>
     </>
   );
