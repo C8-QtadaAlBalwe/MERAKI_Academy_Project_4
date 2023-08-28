@@ -14,7 +14,7 @@ const CartRouter = express.Router();
 CartRouter.post(
   "/",
   authentication,
-  authorization("SHOOPING"),
+  //authorization("SHOOPING"),
   addProductToCart
 );
 
@@ -27,7 +27,7 @@ CartRouter.get(
 CartRouter.delete(
   "/:id",
   authentication,
-  authorization("SHOOPING"),
+  //authorization("SHOOPING"),
   deletePrductFromCart
 );
 

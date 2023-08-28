@@ -98,12 +98,12 @@ const ProductPage = () => {
                   <div className="line"></div>
 
                   <button  className="buy-button"
-                    onClick={ (e) => {
+                    onClick={(e) => {
                       const nameProduct = pro.nameProduct;
                       const img = pro.ImgSrc;
                       const price = pro.price;
-                      try {
-                         axios
+                  
+                          axios
                           .post(
                             "http://localhost:5000/cart/",
                             { colors, size, quantity, price, nameProduct, img },
@@ -115,11 +115,13 @@ const ProductPage = () => {
                           )
                           .then((results) => {
                             console.log(results);
-                          });
-                          navigate("/Cart")
-                      } catch (error) {
-                        console.log(error);
-                      }
+                            console.log("HELLO")
+                            navigate("/Cart")
+                          })
+                          
+                      .catch((err)=>{
+                        console.log(err)
+                      })
                     }}
                   >
                     buy

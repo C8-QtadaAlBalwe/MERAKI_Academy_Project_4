@@ -3,9 +3,7 @@ import axios from "axios";
 import { UserContext } from "../../App";
 import "./Cart-style.css";
 const CartPage = () => {
-  const { token } = useContext(UserContext);
-  const [Cart, setCart] = useState([]);
-  const [total, setTotal] = useState("")
+  const { token,Cart,setCart} = useContext(UserContext);
   useEffect(() => {
     axios
       .get("http://localhost:5000/cart/", {
@@ -26,20 +24,20 @@ const CartPage = () => {
       <div className="pageCart">
         {Cart &&
           Cart.map((pro, i) => {
+            let total_1 = pro.price*pro.quantity
             return (
               <>
                 <div className="product-add">
-                  <div className="imgProduct">
+                  <div className="imgProduct-2">
                     <img src={pro.img}/>
                   </div>
                   <h1>{pro.nameProduct}</h1>
                   <h2>
                     price  :  <span>{pro.price}</span>
                   </h2>
-                  <h2>{pro.colors}</h2>
-                  <h2>{pro.size}</h2>
-                  {setTotal(pro.price * pro.quantity)}
-                  <p>Total : {total}</p>
+                  <h2> Color :  {pro.colors}</h2>
+                  <h2> Size  :    {pro.size}</h2>
+                  <p>Total : {total_1}</p>
                   <button>Delete</button>
                 </div>
               </>

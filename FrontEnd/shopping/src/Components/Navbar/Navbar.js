@@ -7,7 +7,7 @@ const Navigation = () => {
   const navigate = useNavigate();
   const [login, setModelogin] = useState({ display: true, none: false });
   const [sign, setsign] = useState({ display: true, none: false })
-  const { token, firstName,setToken } = useContext(UserContext);
+  const { token, firstName,setToken,setCart } = useContext(UserContext);
 
   return (
     <>
@@ -24,6 +24,7 @@ const Navigation = () => {
             <button  className="button-logout" onClick={()=>{
               localStorage.clear()
               setToken("")
+              setCart([])
               navigate("/sign")
             }}>Logout</button>
           </div>

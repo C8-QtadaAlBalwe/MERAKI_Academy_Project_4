@@ -4,6 +4,7 @@ const cartModel = require("../Models/CartSchema");
 
 const addProductToCart = (req, res) => {
   const { colors, size, quantity, price, nameProduct, img } = req.body;
+  const User = req.token.userId; 
   const productAdded = new cartModel({
     colors,
     size,
@@ -11,6 +12,7 @@ const addProductToCart = (req, res) => {
     price,
     nameProduct,
     img,
+    User
   });
   productAdded
     .save()
@@ -57,7 +59,7 @@ const deletePrductFromCart = (req, res) => {
 
 const getAllCartPordduct = (req, res) => {
   cartModel
-    .find()
+    .find({User:req.token.userId})
     .exec()
     .then((results) => {
       if (results.length) {
