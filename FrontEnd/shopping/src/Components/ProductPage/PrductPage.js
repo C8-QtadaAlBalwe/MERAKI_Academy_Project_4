@@ -2,7 +2,9 @@ import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { UserContext } from "../../App";
 import "./ProductPage-style.css";
+import { useNavigate } from "react-router-dom";
 const ProductPage = () => {
+  const navigate = useNavigate();
   const { token } = useContext(UserContext);
   const [product, setProduct] = useState([]);
   const [colors, setColors] = useState("");
@@ -96,7 +98,7 @@ const ProductPage = () => {
                   <div className="line"></div>
 
                   <button  className="buy-button"
-                    onClick={ () => {
+                    onClick={ (e) => {
                       const nameProduct = pro.nameProduct;
                       const img = pro.ImgSrc;
                       const price = pro.price;
@@ -114,6 +116,7 @@ const ProductPage = () => {
                           .then((results) => {
                             console.log(results);
                           });
+                          navigate("/Cart")
                       } catch (error) {
                         console.log(error);
                       }

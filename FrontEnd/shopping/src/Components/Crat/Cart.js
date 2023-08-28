@@ -5,15 +5,15 @@ import "./Cart-style.css";
 const CartPage = () => {
   const { token } = useContext(UserContext);
   const [Cart, setCart] = useState([]);
+  const [total, setTotal] = useState("")
   useEffect(() => {
     axios
-      .get("http://localhost:5000/cart/",{
+      .get("http://localhost:5000/cart/", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       })
       .then((result) => {
-        console.log(result);
         setCart(result.data.results);
       })
       .catch((err) => {
@@ -24,7 +24,28 @@ const CartPage = () => {
   return (
     <>
       <div className="pageCart">
-     <h1>Cart</h1>     
+        {Cart &&
+          Cart.map((pro, i) => {
+            return (
+              <>
+                <div className="product-add">
+                  <div className="imgProduct">
+                    <img src={pro.img}/>
+                  </div>
+                  <h1>{pro.nameProduct}</h1>
+                  <h2>
+                    price  :  <span>{pro.price}</span>
+                  </h2>
+                  <h2>{pro.colors}</h2>
+                  <h2>{pro.size}</h2>
+                  {setTotal(pro.price * pro.quantity)}
+                  <p>Total : {total}</p>
+                  <button>Delete</button>
+                </div>
+              </>
+            )
+          })
+        }
       </div>
     </>
   );

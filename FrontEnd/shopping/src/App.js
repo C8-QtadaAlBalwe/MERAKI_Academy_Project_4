@@ -24,6 +24,7 @@ function App() {
           <Route path="/Cart" element={<CartPage />}></Route>
           <Route path="/Contact-Us" element={<ContactUs />}></Route>
           <Route path="/About-us" element={<AboutUs />}></Route>
+          <Route path="/Cart" element={<CartPage/>}></Route>
         </Routes>
 
       </div>
