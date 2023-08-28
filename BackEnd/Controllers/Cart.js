@@ -84,4 +84,5 @@ const getAllCartPordduct = (req, res) => {
         });
     });
 };
+
 module.exports = { addProductToCart, deletePrductFromCart, getAllCartPordduct };

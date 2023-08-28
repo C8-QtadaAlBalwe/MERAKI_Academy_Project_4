@@ -3,7 +3,7 @@ const express = require("express");
 const {
   createNewProduct,
   getAllproduct,
-  getProductById,
+  getProductByName,
 } = require("../Controllers/Products");
 
 // MiddileWare
@@ -19,5 +19,5 @@ ProductRouter.post(
   createNewProduct
 );
 ProductRouter.get("/", authentication, getAllproduct);
-ProductRouter.get("/search_2/:id", getProductById);
+ProductRouter.get("/search_2/:nameProduct", getProductByName);
 module.exports = ProductRouter;

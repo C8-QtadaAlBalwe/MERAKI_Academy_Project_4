@@ -63,22 +63,22 @@ const getAllproduct = (req, res) => {
     });
 };
 
-const getProductById = (req, res) => {
-  let id = req.params.id;
+const getProductByName = (req, res) => {
+  let nameProduct = req.params.nameProduct;
   productModel
-    .findById(id)
+    .find({nameProduct:req.params.nameProduct})
     .populate("User")
     .exec()
     .then((results) => {
       if (!results) {
         return res.status(404).json({
           success: false,
-          massege: `The product with id => ${id} not found`,
+          massege: `The product with id => ${nameProduct} not found`,
         });
       }
       res.status(200).json({
         success: true,
-        massege: `the product ${id}`,
+        massege: `the product ${nameProduct}`,
         product: results,
       });
     })
@@ -93,5 +93,5 @@ const getProductById = (req, res) => {
 module.exports = {
   createNewProduct,
   getAllproduct,
-  getProductById,
+  getProductByName,
 };
