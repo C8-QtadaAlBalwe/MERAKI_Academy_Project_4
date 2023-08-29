@@ -27,6 +27,7 @@ const Navigation = () => {
                 <img src="https://th.bing.com/th/id/OIP.8hjfJpy1QT2Z3VnoVCkAUQHaHa?pid=ImgDet&rs=1" />
                 {firstName}
               </h1>
+             
               <Link to="/Products" className="link">
                 Products
               </Link>
@@ -41,9 +42,12 @@ const Navigation = () => {
                   setCart([]);
                   navigate("/sign");
                 }}
+                
               >
                 Logout
               </button>
+              <input type="text" placeholder="Search By Name"/>
+              <button>Search</button>
             </div>
           ) : (
             <div className="divs-Bar">

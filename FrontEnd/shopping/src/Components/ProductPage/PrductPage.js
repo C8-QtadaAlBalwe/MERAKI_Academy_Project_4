@@ -114,8 +114,9 @@ const ProductPage = () => {
                             }
                           )
                           .then((results) => {
-                            console.log(results);
-                            console.log("HELLO")
+
+
+                            
                             navigate("/Cart")
                           })
                           
