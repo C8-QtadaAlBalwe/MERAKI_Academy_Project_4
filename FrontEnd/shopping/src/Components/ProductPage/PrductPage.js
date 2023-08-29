@@ -28,6 +28,8 @@ const ProductPage = () => {
 
   return (
     <>
+    <input type="text" placeholder="Search By Name"/>
+              <button>Search</button>
       <div className="pageProduct">
         {product &&
           product.map((pro, i) => {

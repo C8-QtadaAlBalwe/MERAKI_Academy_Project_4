@@ -24,15 +24,16 @@ const Navigation = () => {
           {token ? (
             <div className="divs-Bar">
               <h1>
+              {firstName}
                 <img src="https://th.bing.com/th/id/OIP.8hjfJpy1QT2Z3VnoVCkAUQHaHa?pid=ImgDet&rs=1" />
-                {firstName}
+                
               </h1>
              
               <Link to="/Products" className="link">
                 Products
               </Link>
               <Link to="/Cart" className="link">
-                Shopping Cart
+                Shopping 
               </Link>
               <button
                 className="button-logout"
@@ -46,8 +47,7 @@ const Navigation = () => {
               >
                 Logout
               </button>
-              <input type="text" placeholder="Search By Name"/>
-              <button>Search</button>
+              
             </div>
           ) : (
             <div className="divs-Bar">
