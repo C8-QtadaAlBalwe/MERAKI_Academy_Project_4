@@ -19,6 +19,7 @@ font-weight: bolder;
     padding: 22px;
     margin:0 auto 0 auto;
     border: none;
+    border-radius: 5px;
     border-bottom: 5px solid rgb(234, 10, 241);
     color: blueviolet;
 }

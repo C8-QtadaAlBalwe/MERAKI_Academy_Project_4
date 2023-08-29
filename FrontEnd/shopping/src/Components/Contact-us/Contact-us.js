@@ -18,6 +18,11 @@ const ContactUs = () => {
   <h1>skype</h1>
   <p>qtadaahmad@skybe.com</p>
 </div>
+<div className="card">
+  <img src="https://th.bing.com/th/id/R.601538049b6e68c00c36699c87f04fab?rik=7NDPMBW2XnMhMw&pid=ImgRaw&r=0"/>
+  <h1>Instgram</h1>
+  <p>qtadaahmad@Instgram.com</p>
+</div>
 </div>
 
 </>
