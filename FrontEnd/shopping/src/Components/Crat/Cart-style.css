@@ -1,13 +1,11 @@
 .pageCart{
-    margin: 30px;
     width: 100%;
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
-    gap:30px;
+    gap:20px;
     overflow-x: hidden;
-    position: absolute;
-    top: 0px;
+    position: relative;
 }
 .product-add{
     width: 200px;

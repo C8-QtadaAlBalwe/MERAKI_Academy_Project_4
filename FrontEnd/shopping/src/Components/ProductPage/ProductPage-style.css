@@ -1,27 +1,29 @@
 .pageProduct{
-    margin-top: 30px;
+    margin-top: 50px;
     width: 100%;
     min-height: 100vh;
+    align-items: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap:30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content:space-around;
+    gap:20px;
     overflow-x: hidden;
-    position: absolute;
-    top: 100px;
+    position: relative;
+    padding: 20px;
 }
 .product-item{
     width:200px;
     height: 360px;
-    background-image: url("https://th.bing.com/th/id/OIP.LkdBN9vx8mSnoAbAxEu6_QHaJY?pid=ImgDet&w=600&h=760&rs=1");
-    background-repeat:no-repeat;
-    background-position: center;
     border-radius: 15px;
     margin: auto;
     overflow: hidden; 
-    box-shadow: 1px 2px 3px 5px blueviolet;
+    box-shadow: 1px 2px 3px 8px purple;
     cursor: pointer;
     transition: .5s ease;
     } 
+    .product-item:hover{
+        transform: scale(1.1);
+    }
 .imgProduct{
     width: 100%;
     height: 100%;
@@ -37,7 +39,9 @@
     height: 100%;
     transition: .4s ease-in-out;
 }
-
+.imgProduct img:hover{
+    opacity: .7;
+}
 .product-item h1{
 text-align: center;
 font-size: 30px;
@@ -98,9 +102,9 @@ padding-bottom: 5px;
 .search{
     position: absolute;
     top: 70px;
-    right: 30px;
+    right: 260px;
     height: 30px;
-    width: 300px;
+    width: 800px;
 }
 .search input{
     height: 100%;
@@ -112,11 +116,21 @@ padding-bottom: 5px;
     color: blueviolet;
     border: 2px solid rgb(193, 2, 183);;
     height: 120%;
-    border-radius: 0 10px 10px 0;
     box-shadow: 2px 1px  4px #fff;
     cursor: pointer;
     transition: .4s ease;
+    border-radius: 6px;
 }
 .search button:hover{
     transform: scale(1.1);
+}
+
+.search .BACK{
+    background-color:#fff;
+    color: blueviolet;
+    border: 2px solid rgb(193, 2, 183);;
+    height: 120%;
+    box-shadow: 2px 1px  4px #fff;
+    cursor: pointer;
+    transition: .4s ease;
 }

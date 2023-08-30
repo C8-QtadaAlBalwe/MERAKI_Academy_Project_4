@@ -19,5 +19,5 @@ ProductRouter.post(
   createNewProduct
 );
 ProductRouter.get("/", authentication, getAllproduct);
-ProductRouter.get("/search_2/:nameProduct", getProductByName);
+ProductRouter.get("/search_2/:nameProduct",  getProductByName);
 module.exports = ProductRouter;

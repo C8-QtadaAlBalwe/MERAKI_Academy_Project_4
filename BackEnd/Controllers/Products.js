@@ -64,25 +64,26 @@ const getAllproduct = (req, res) => {
 };
 
 const getProductByName = (req, res) => {
-  let nameProduct = req.params.nameProduct;
+  let name = req.params.nameProduct;
+  console.log(name)
   productModel
-    .find({nameProduct:req.params.nameProduct})
-    .populate("User")
+    .find({nameProduct:name})
     .exec()
     .then((results) => {
       if (!results) {
         return res.status(404).json({
           success: false,
-          massege: `The product with id => ${nameProduct} not found`,
+          massege: `The product with id => ${name} not found`,
         });
       }
       res.status(200).json({
         success: true,
-        massege: `the product ${nameProduct}`,
+        massege: `the product ${name}`,
         product: results,
       });
     })
     .catch((err) => {
+      console.log(err)
       res.status(500).json({
         success: false,
         massege: "server error",

@@ -37,7 +37,7 @@ const CartPage = () => {
                   </div>
                   <h1>{pro.nameProduct}</h1>
                   <h2>
-                    price : <span>{pro.price}</span>
+                    price : <span>{pro.price} $</span>
                   </h2>
                   <h2> Color : {pro.colors}</h2>
                   <h2> Size : {pro.size}</h2>

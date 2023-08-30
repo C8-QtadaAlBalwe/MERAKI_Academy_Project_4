@@ -10,7 +10,8 @@ const ProductPage = () => {
   const [colors, setColors] = useState("");
   const [size, setSize] = useState("");
   const [quantity, setQuantity] = useState("");
-  const [mode,setMode]=useState({display:true , none:false})
+  const [mode,setMode]=useState("")
+  const [search,setSearch]=useState("")
   useEffect(() => {
     axios
       .get("http://localhost:5000/product/", {
@@ -30,9 +31,19 @@ const ProductPage = () => {
   return (
     <>
     <div className="search">
-    <input type="text" placeholder="Search By Name"/>
-    <button>Search</button>
-    </div>
+    <button className="BACK" onClick={()=>{}}>Back To Products</button>
+    <input type="text" placeholder="Search By Name" onChange={(e)=>{setSearch(e.target.value)}}/>
+    <button onClick={()=>{
+      axios.get(`http://localhost:5000/product/search_2/${search}`).then((result) => {
+      setProduct(result.data.product)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    }}> 
+     
+   Click To Search</button>
+    </div> 
       <div className="pageProduct">
         {product &&
           product.map((pro, i) => {
@@ -40,11 +51,9 @@ const ProductPage = () => {
               <>
                 <div className="product-item">
                   <div className={`${
-                  mode.display ? "imgProduct" : "imgProduct-none"
+                  mode == pro._id ? "imgProduct-none" : "imgProduct"
                 }`} onClick={() => {
-                  setMode((mode) => {
-                    return { display: !mode.display, none: !mode.none };
-                  });
+                  setMode(pro._id) 
                 }}>
                   <img src={pro.ImgSrc} />
                   </div>
