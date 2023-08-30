@@ -109,10 +109,9 @@ font-size: 20px;
 top:-16px;
 width: 70px;
 height: 30px;
-border: 4px solid pink;
+border-bottom: 4px solid pink;
 text-align: center;
-background-color: rgb(255, 255, 255);
-color: blueviolet;
+color: rgb(209, 209, 12);
 }
 .divs-Bar  img{
 position: absolute;

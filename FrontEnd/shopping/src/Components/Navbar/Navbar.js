@@ -25,7 +25,7 @@ const Navigation = () => {
             <div className="divs-Bar">
               <h1>
               {firstName}
-                <img src="https://th.bing.com/th/id/R.07f6ad0ebaf84692e878826636c382c6?rik=29AibLxrmjAADg&pid=ImgRaw&r=0" />
+                <Link to="/Profile"><img src="https://th.bing.com/th/id/R.07f6ad0ebaf84692e878826636c382c6?rik=29AibLxrmjAADg&pid=ImgRaw&r=0" /></Link>
                 
               </h1>
              

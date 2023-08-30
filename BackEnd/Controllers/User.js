@@ -86,7 +86,39 @@ const login = (req, res) => {
       });
     });
 };
+
+
+const getDataUser = (req, res) => {
+  const User = req.params.userId;
+  UserModel
+    .findById({_id:User})
+    .exec()
+    .then((results) => {
+      if (results) {
+        res.status(200).json({
+          success: true,
+          massege: "this is user",
+          results: results,
+          User,
+        });
+      } else {
+        res.status(200).json({
+          success: false,
+          massege: "no ther user",
+        });
+      }
+    })
+    .catch((err) => {
+      res.status(500),
+        json({
+          success: false,
+          massege: "Server Error",
+          err: err.massege,
+        });
+    });
+};
 module.exports = {
   signUp,
   login,
+  getDataUser
 };

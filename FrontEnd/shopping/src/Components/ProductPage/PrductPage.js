@@ -12,6 +12,7 @@ const ProductPage = () => {
   const [quantity, setQuantity] = useState("");
   const [mode,setMode]=useState("")
   const [search,setSearch]=useState("")
+  const [products,setProducts]=useState([])
   useEffect(() => {
     axios
       .get("http://localhost:5000/product/", {
@@ -22,6 +23,7 @@ const ProductPage = () => {
       .then((result) => {
         console.log(result);
         setProduct(result.data.results);
+        setProducts(result.data.results)
       })
       .catch((err) => {
         console.log(err);
@@ -31,7 +33,9 @@ const ProductPage = () => {
   return (
     <>
     <div className="search">
-    <button className="BACK" onClick={()=>{}}>Back To Products</button>
+    <button className="BACK" onClick={()=>{
+      setProduct(products)
+    }}>Back To Products</button>
     <input type="text" placeholder="Search By Name" onChange={(e)=>{setSearch(e.target.value)}}/>
     <button onClick={()=>{
       axios.get(`http://localhost:5000/product/search_2/${search}`).then((result) => {
