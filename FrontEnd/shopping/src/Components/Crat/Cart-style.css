@@ -6,21 +6,25 @@
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     gap:30px;
     overflow-x: hidden;
+    position: absolute;
+    top: 0px;
 }
 .product-add{
     width: 200px;
-    height: 300px;
-    background-color: aliceblue;
+    height: 340px;
+    background-color: rgb(215, 227, 236);
     border-radius: 15px;
     margin: auto;
     overflow: hidden; 
     box-shadow: 1px 2px 3px 0 #444;
     transition: .4s ease;
+    box-shadow: 1px 2px 3px 5px blueviolet;
     position: relative;
 }
+
 .imgProduct-2{
     width: 100%;
-    height: 40%;
+    height: 50%;
 }
 .imgProduct-2 img{
     width: 100%;
@@ -28,28 +32,30 @@
 }
 
 .product-add h1{
-text-align: center;
-font-size: 15px;
-font-weight: bolder;
-color: rgb(202, 70, 70);
+    text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
+    color: rgb(202, 70, 70);
+    border-radius:0 20px 20px 0;
+    color:darkblue;
 }
 
 .product-add h2 ,p{
- margin:5px 10px 3px 10px;
- font-weight: bolder;
-font-size: 15px;
-color: rgb(204, 65, 65);
-padding-bottom: 5px;
+    margin:5px 10px 3px 10px;
+    font-size: 16px;
+    font-weight: bolder;
+    color: blueviolet;
+    padding-bottom: 5px;
 }
 .product-add button{
     position: absolute;
     bottom: 25px;
     left: 50%;
     width: 90px;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 10px;
-    background-color:brown;
-    color: yellow;
+    background-color: rgb(193, 2, 183);
+    color: rgb(253, 253, 253);
     font-weight: bolder;
     transition: .4s ease;
     cursor: pointer;

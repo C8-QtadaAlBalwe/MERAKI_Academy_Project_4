@@ -10,6 +10,7 @@ const ProductPage = () => {
   const [colors, setColors] = useState("");
   const [size, setSize] = useState("");
   const [quantity, setQuantity] = useState("");
+  const [mode,setMode]=useState({display:true , none:false})
   useEffect(() => {
     axios
       .get("http://localhost:5000/product/", {
@@ -28,22 +29,30 @@ const ProductPage = () => {
 
   return (
     <>
+    <div className="search">
     <input type="text" placeholder="Search By Name"/>
-              <button>Search</button>
+    <button>Search</button>
+    </div>
       <div className="pageProduct">
         {product &&
           product.map((pro, i) => {
             return (
               <>
                 <div className="product-item">
-                  <div className="imgProduct">
-                    <img src={pro.ImgSrc} />
+                  <div className={`${
+                  mode.display ? "imgProduct" : "imgProduct-none"
+                }`} onClick={() => {
+                  setMode((mode) => {
+                    return { display: !mode.display, none: !mode.none };
+                  });
+                }}>
+                  <img src={pro.ImgSrc} />
                   </div>
                   <h1>{pro.nameProduct}</h1>
                   <h2>
                     price : <span>{pro.price} $</span>
                   </h2>
-                  <div className="line"></div>
+                  
                   <h2>Size</h2>
                   <button value={pro.size[0]}
                     onClick={(e) => {
@@ -66,7 +75,6 @@ const ProductPage = () => {
                   >
                     {pro.size[2]}
                   </button>
-                  <div className="line"></div>
                   <h2>colors</h2>
                   <button value={pro.colors[0]}
                     onClick={(e) => {
@@ -97,7 +105,6 @@ const ProductPage = () => {
                       setQuantity(e.target.value);
                     }}
                   />
-                  <div className="line"></div>
 
                   <button  className="buy-button"
                     onClick={(e) => {
@@ -129,6 +136,7 @@ const ProductPage = () => {
                   >
                     buy
                   </button>
+                  
                 </div>
               </>
             );

@@ -41,7 +41,7 @@ const CartPage = () => {
                   </h2>
                   <h2> Color : {pro.colors}</h2>
                   <h2> Size : {pro.size}</h2>
-                  <p>Total : {total_1}</p>
+                  <p>Total : {total_1} $</p>
                   <button
                     onClick={(e) => {
                       const User = pro._id;

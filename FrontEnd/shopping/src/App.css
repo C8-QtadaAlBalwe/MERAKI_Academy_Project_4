@@ -3,7 +3,7 @@
   min-height: 100vh;
   background-image: url("../../../picture/vector-online-shopping-web-banner.jpg");
   background-repeat: no-repeat;
-  background-position:bottom;
+  background-position:center;
   background-size:cover;
   overflow-y: hidden;
 }

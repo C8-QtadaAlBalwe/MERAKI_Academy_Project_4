@@ -11,7 +11,7 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [User, setUser] = useState("");
   return (
-    <>
+    <> 
         <div className="sign-up-cart">
           <h1>Create Account</h1>
           <input
@@ -69,7 +69,7 @@ const SignUp = () => {
           >
             Sign-Up
           </button>
-        </div>
+          </div>
     </>
   );
 };

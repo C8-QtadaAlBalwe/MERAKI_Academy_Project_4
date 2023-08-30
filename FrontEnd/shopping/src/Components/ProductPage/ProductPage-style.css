@@ -6,58 +6,69 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap:30px;
     overflow-x: hidden;
-
+    position: absolute;
+    top: 100px;
 }
 .product-item{
-    
     width:200px;
-    height: 430px;
-    background-color: aliceblue;
+    height: 360px;
+    background-image: url("https://th.bing.com/th/id/OIP.LkdBN9vx8mSnoAbAxEu6_QHaJY?pid=ImgDet&w=600&h=760&rs=1");
+    background-repeat:no-repeat;
+    background-position: center;
     border-radius: 15px;
     margin: auto;
     overflow: hidden; 
-    box-shadow: 1px 2px 3px 0 #444;
-    transition: .4s ease;
+    box-shadow: 1px 2px 3px 5px blueviolet;
+    cursor: pointer;
+    transition: .5s ease;
     } 
-    
-    .product-item:hover{
-        transform: scale(1.1);
-    }
 .imgProduct{
     width: 100%;
-    height: 20%;
+    height: 100%;
+    transition: .5s ease;
 }
+.imgProduct-none{
+    transition: .7s ease;
+    height: 0%;
+}
+    
 .imgProduct img{
     width: 100%;
     height: 100%;
     transition: .4s ease-in-out;
 }
-.imgProduct img:hover{
-    opacity: .5;
-}
+
 .product-item h1{
 text-align: center;
-font-size: 15px;
+font-size: 30px;
 font-weight: bolder;
 color: rgb(202, 70, 70);
+border-radius:0 20px 20px 0;
+color:rgb(178, 23, 124);
 }
 .pageProduct h2{
 margin:5px 10px 3px 10px;
-font-size: 15px;
-color: rgb(204, 65, 65);
+font-size: 16px;
+color: blueviolet;
 padding-bottom: 5px;
 }
 
+.pageProduct h2 span{
+    color: rgb(178, 23, 124);
+    font-size:20px;
+    margin-left: 30px;
+}
+
 .product-item button{
-    width: 45px;
+    width: 55px;
     padding: 10px;
-    margin: 3px 0 3px 15px ;
-    color: yellow;
-    font-size: 11px;
+    margin: 3px 5px 5px 5px ;
+    color: rgb(255, 255, 1);
+    font-size: 14px;
     text-align: center;
     font-weight: bolder;
-    background-color: rgb(199, 78, 78);
-    border-radius: 10px;
+    background-color: rgb(59, 12, 227);
+    border-radius: 8px;
     border: none;
     cursor: pointer;
     transition: .4s ease;
@@ -67,26 +78,45 @@ padding-bottom: 5px;
 }
 
 .product-item input{
-    margin:10px;
+    margin:13px;
     padding: 5px;
-    background-color: rgb(223, 238, 12);
-    border: none;
-    color: brown;
-}
-.line{
-    width: 80%;
-    height: 2px;
-    background-color:gray;
-    margin: auto;
+    border: 2px solid rgb(234, 10, 241);
+    color: blueviolet;
+    border-radius: 8px;
 }
 
 .product-item  .buy-button{
-    margin:2px 50px  5px 50px;
-    width: 90px;
+    margin: 0 auto auto 37px;
+    width: 130px;
     padding: 8px;
-    color: yellow;
+    color: rgb(253, 253, 253);
     font-weight: bolder;
-    background-color: green;
+    background-color: rgb(193, 2, 183);
     border: none;
     border-radius: 5px;
+}
+.search{
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    height: 30px;
+    width: 300px;
+}
+.search input{
+    height: 100%;
+    width: 70%;
+    color: blueviolet;
+}
+.search button{
+    background-color:#fff;
+    color: blueviolet;
+    border: 2px solid rgb(193, 2, 183);;
+    height: 120%;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 2px 1px  4px #fff;
+    cursor: pointer;
+    transition: .4s ease;
+}
+.search button:hover{
+    transform: scale(1.1);
 }
