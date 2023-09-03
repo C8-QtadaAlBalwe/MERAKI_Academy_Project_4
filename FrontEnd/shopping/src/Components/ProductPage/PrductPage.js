@@ -12,7 +12,10 @@ const ProductPage = () => {
   const [quantity, setQuantity] = useState("");
   const [mode,setMode]=useState("")
   const [search,setSearch]=useState("")
+  const [massegeMatch,setMassegeMatch]=useState("")
   const [products,setProducts]=useState([])
+  const [modeMatch,setModeMatch]=useState("hidden")
+  const[massegeRequire,setMassegeRequire]=useState("")
   useEffect(() => {
     axios
       .get("http://localhost:5000/product/", {
@@ -35,11 +38,14 @@ const ProductPage = () => {
     <div className="search">
     <button className="BACK" onClick={()=>{
       setProduct(products)
+      setModeMatch("hidden")
     }}>Back To Products</button>
     <input type="text" placeholder="Search By Name" onChange={(e)=>{setSearch(e.target.value)}}/>
     <button onClick={()=>{
       axios.get(`http://localhost:5000/product/search_2/${search}`).then((result) => {
       setProduct(result.data.product)
+      setMassegeMatch(result.data.product.length)
+      setModeMatch("display")
       })
       .catch((err) => {
         console.log(err);
@@ -48,6 +54,8 @@ const ProductPage = () => {
      
    Click To Search</button>
     </div> 
+    <div className={`${modeMatch}`}> {massegeMatch} Matches </div>
+    
       <div className="pageProduct">
         {product &&
           product.map((pro, i) => {
@@ -61,6 +69,7 @@ const ProductPage = () => {
                 }}>
                   <img src={pro.ImgSrc} />
                   </div>
+                  <p>{massegeRequire}</p>
                   <h1>{pro.nameProduct}</h1>
                   <h2>
                     price : <span>{pro.price} $</span>
@@ -115,7 +124,8 @@ const ProductPage = () => {
                     type="number"
                     placeholder="quantity"
                     onChange={(e) => {
-                      setQuantity(e.target.value);
+                      if(e.target.value>0){
+                      setQuantity(e.target.value)};
                     }}
                   />
 
@@ -124,6 +134,7 @@ const ProductPage = () => {
                       const nameProduct = pro.nameProduct;
                       const img = pro.ImgSrc;
                       const price = pro.price;
+                      if(colors !="" && quantity != ""&& size!="" ){
                   
                           axios
                           .post(
@@ -136,16 +147,13 @@ const ProductPage = () => {
                             }
                           )
                           .then((results) => {
-
-
-                            
                             navigate("/Cart")
                           })
                           
                       .catch((err)=>{
                         console.log(err)
                       })
-                    }}
+                    }else{setMassegeRequire("You should complete order")}}}
                   >
                     buy
                   </button>

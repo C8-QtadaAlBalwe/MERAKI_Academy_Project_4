@@ -8,7 +8,8 @@ const Login=()=>{
     const [email,setEmail]=useState("");
     const[password,setPassword]=useState("");
     const {token,setToken}=useContext(UserContext)
-    const{firstName,setfristName}=useContext(UserContext)
+    const [userId,setUserId]=useState("")
+    const{firstName,setfristName,setAnmate}=useContext(UserContext)
     const [massege,setMassege]=useState("")
     return(
     <>
@@ -19,16 +20,19 @@ const Login=()=>{
         <button onClick={(e)=>{
             axios.post("http://localhost:5000/users/login",{email,password}).then((result)=>{
                 setToken(result.data.token)
+                setUserId(result.data.userId)
+                localStorage.setItem("userId",result.data.userId);
                  localStorage.setItem("token",result.data.token);
                  setfristName(result.data.User)
                  navigate("/Products")
-
+                 setAnmate("hiddin")
             }).catch((err)=>{
                 setMassege("You Need to Create Account !!")
             });
         }}>Login</button>
         <p>{massege}</p>
         </div>
+        <div className="list-declrations"></div>
     </>)
 }
 export default Login

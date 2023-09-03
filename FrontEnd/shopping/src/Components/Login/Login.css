@@ -1,16 +1,16 @@
 .Login-cart {
     width: 400px;
     height: 400px;
-    background-color: rgb(152, 197, 236);
-    margin: 61px 0 auto 30px;
+    background-color: rgb(248, 248, 248);
+    margin: 91px 0 auto 130px;
     border-radius: 30px;
-    border: 12px solid rgb(159, 14, 140);
-    box-shadow: 1px 1px 1px 1px #444;
+    border: 4px solid rgb(5, 136, 153);
+    box-shadow: 1px 1px 1px 5px #fdfeff;
 }
 
 .Login-cart h1 {
     text-align: center;
-    color: rgb(234, 10, 241);
+    color:  rgb(5, 136, 153);
     font-family: sans-serif;
     font-weight: bolder;
 }
@@ -19,28 +19,25 @@
     display: block;
     width: 80%;
     padding: 30px;
-    margin:20px auto 0 auto;
+    margin:0 auto 0 auto;
     border: none;
     border-radius: 5px;
-    border-bottom: 5px solid rgb(234, 10, 241);
-    color: blueviolet;
+    border-bottom: 3px solid#72c209;
+    color:rgb(5, 136, 153);
 }
-
 ::placeholder {
-    color: rgb(219, 49, 235);
+    color: rgb(5, 136, 153);
     opacity: .9;
     font-weight: bolder;
     text-align: center;
 }
-
-
 .Login-cart button {
-    margin: 25px 0 0 40px;
+    margin:15px 0 0 40px ;
     width: 320px;
     padding: 15px;
     border-radius: 5px;
     border: none;
-    background-color: rgb(195, 18, 195);
+    background-color:rgb(5, 136, 153);
     font-size: large;
     font-weight: bolder;
     font-family: sans-serif;

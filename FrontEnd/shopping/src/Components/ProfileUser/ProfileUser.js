@@ -1,22 +1,21 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { UserContext } from "../../App";
+import "./ProfileUser.css"
  const ProfileUser=()=>{
     const { token } = useContext(UserContext);
-    const [userId,setUserId]=useState("");
     const[profile,setProfile]=useState([])
-    console.log(token)
+    const userID= localStorage.getItem("userId")
     useEffect(() => {
-        setUserId(token.userId)
         axios
-          .get(`http://localhost:5000/users/${userId}`, {
+          .get(`http://localhost:5000/users/${userID}`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
           })
           .then((result) => {
             console.log(result);
-            setProfile(result)
+            setProfile(result.data.results)
           })
           .catch((err) => {
             console.log(err);
@@ -25,10 +24,14 @@ import { UserContext } from "../../App";
 
       return<>
       
-    <div>
-     <h2>profile</h2>
-     <h1>{profile.firstName}</h1>
-
+    <div className="pageProfile">
+     <h1> Your Profile</h1>
+     <div className="line3"></div>
+     <h2>  Name : {profile.firstName} {profile.lastName}</h2>
+     <div className="line3"></div>
+     <h2> email  : {profile.email}</h2>
+     <div className="line3"></div>
+     <h2> age     : {profile.age} Years</h2>
     </div>
       
       

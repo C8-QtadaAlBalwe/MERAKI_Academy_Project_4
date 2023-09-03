@@ -1,7 +1,7 @@
 .About-app{
     width: 90%;
     height: 90%;
-    background-color:aliceblue;
+    background-color:#ffffff;
     margin: 40px auto;
     border-radius: 20px;
     position: relative;
@@ -9,7 +9,8 @@
 .title-1{
     margin: 30px auto 130px auto;
     text-align: center;
-    color:rgb(234, 10, 241);
+    color:rgb(5, 136, 153);
+    
 }
 .About-app span{
     height: 500px;
@@ -22,5 +23,5 @@
     background-color: aliceblue;
     padding: 15px;
     border-radius: 15px;
-    border: 5px solid rgb(234, 10, 241);
+    border: 5px solid  rgb(5, 136, 153);
 }

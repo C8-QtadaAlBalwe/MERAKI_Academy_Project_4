@@ -14,9 +14,9 @@
     border-radius: 15px;
     margin: auto;
     overflow: hidden; 
-    box-shadow: 1px 2px 3px 0 #444;
+    box-shadow: 1px 2px 3px 5px #ffffff;
     transition: .4s ease;
-    box-shadow: 1px 2px 3px 5px blueviolet;
+    box-shadow: 1px 2px 3px 5px rgb(5, 136, 153);
     position: relative;
 }
 
@@ -33,16 +33,15 @@
     text-align: center;
     font-size: 18px;
     font-weight: bolder;
-    color: rgb(202, 70, 70);
     border-radius:0 20px 20px 0;
-    color:darkblue;
+    color:rgb(5, 136, 153);
 }
 
 .product-add h2 ,p{
     margin:5px 10px 3px 10px;
     font-size: 16px;
     font-weight: bolder;
-    color: blueviolet;
+    color: rgb(5, 136, 153);
     padding-bottom: 5px;
 }
 .product-add button{
@@ -52,14 +51,49 @@
     width: 90px;
     border-radius: 10px;
     padding: 10px;
-    background-color: rgb(193, 2, 183);
+    background-color: rgb(224, 4, 4);
     color: rgb(253, 253, 253);
+    border: 3px solid rgb(5, 136, 153);;
     font-weight: bolder;
     transition: .4s ease;
     cursor: pointer;
-    border: none;
 }
 
 .product-add button:hover{
+    transform: scale(1.1);
+    box-shadow: 1px 2px 3px 3px rgb(235, 12, 4);;
+}
+.massege-sure-hidden{
+    display: none;
+}
+
+.massage-sure-display{
+    height: 130px;
+    width: 400px ;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(238, 245, 238);
+    position: absolute;
+    top:100px;
+    right: 450px;
+    border-radius: 20px;
+    border:  3px solid rgb(5, 136, 153);
+    box-shadow: 2px 2px 4px 4px #ffffff;
+    z-index: 1;
+}
+.massage-sure-display button{
+    width: 90px;
+    border-radius: 10px;
+    padding: 10px;
+    color: rgb(12, 143, 8);
+    border: 3px solid rgb(5, 136, 153);;
+    font-weight: bolder;
+    transition: .4s ease;
+    cursor: pointer;
+    margin: 20px;
+    
+}
+
+.massage-sure-display button:hover{
     transform: scale(1.1);
 }

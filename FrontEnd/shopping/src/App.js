@@ -14,8 +14,9 @@ function App() {
   const [token, setToken] = useState(localStorage.getItem("token"))
   const [Cart,setCart]=useState([])
   const [firstName, setfristName] = useState("")
+  const [Anmate,setAnmate]=useState("hiddin")
   return (
-    <UserContext.Provider value={{ token, setToken,firstName,setfristName,Cart,setCart }}>
+    <UserContext.Provider value={{ token, setToken,firstName,setfristName,Cart,setCart,setAnmate}}>
       <div className='App'>
         <Navigation />
         <Routes>
@@ -28,8 +29,8 @@ function App() {
           <Route path="/About-us" element={<AboutUs />}></Route>
           <Route path="/Cart" element={<CartPage/>}></Route>
         </Routes>
-
       </div>
+
  </UserContext.Provider > 
   );
 }

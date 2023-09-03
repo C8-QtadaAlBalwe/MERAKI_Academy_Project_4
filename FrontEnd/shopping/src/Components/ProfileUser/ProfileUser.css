@@ -1,0 +1,29 @@
+.pageProfile{
+    width: 400px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    margin: 61px 0 auto 30px ;
+    border-radius: 30px;
+    border: 5px solid   rgb(5, 136, 153);
+    box-shadow: 1px 1px 1px 1px #444;
+    margin:160px auto;
+    overflow: hidden;
+}
+
+.pageProfile h1{
+    text-align: center;
+    background-color: #72c209;
+    color: #ffffff;
+    margin: auto;
+}
+
+.pageProfile h2{
+  text-align: center;
+  color: rgb(5, 136, 153);
+}
+
+.line3{
+    height: 3px;
+    width: 100%;
+    background-color: #88ff01;
+}

@@ -9,7 +9,7 @@
     gap:20px;
     overflow-x: hidden;
     position: relative;
-    padding: 20px;
+    padding: 22px;
 }
 .product-item{
     width:200px;
@@ -17,12 +17,13 @@
     border-radius: 15px;
     margin: auto;
     overflow: hidden; 
-    box-shadow: 1px 2px 3px 8px purple;
+    box-shadow: 1px 2px 3px 8px  rgb(5, 136, 153);
     cursor: pointer;
     transition: .5s ease;
     } 
     .product-item:hover{
         transform: scale(1.1);
+        box-shadow: 1px 2px 3px 8px #72c209;
     }
 .imgProduct{
     width: 100%;
@@ -44,22 +45,22 @@
 }
 .product-item h1{
 text-align: center;
+margin-top: -5px;
 font-size: 30px;
 font-weight: bolder;
-color: rgb(202, 70, 70);
 border-radius:0 20px 20px 0;
-color:rgb(178, 23, 124);
+color:rgb(5, 136, 153);
 }
 .pageProduct h2{
 margin:5px 10px 3px 10px;
 font-size: 16px;
-color: blueviolet;
+color: rgb(5, 136, 153);
 padding-bottom: 5px;
 }
 
 .pageProduct h2 span{
-    color: rgb(178, 23, 124);
-    font-size:20px;
+    color: #72c209;
+    font-size:30px;
     margin-left: 30px;
 }
 
@@ -67,11 +68,11 @@ padding-bottom: 5px;
     width: 55px;
     padding: 10px;
     margin: 3px 5px 5px 5px ;
-    color: rgb(255, 255, 1);
+    color:rgb(5, 136, 153);
     font-size: 14px;
     text-align: center;
     font-weight: bolder;
-    background-color: rgb(59, 12, 227);
+    background-color: rgb(255, 255, 255);
     border-radius: 8px;
     border: none;
     cursor: pointer;
@@ -79,58 +80,86 @@ padding-bottom: 5px;
 }
 .product-item button:hover{
     transform: scale(1.1);
+    box-shadow:  1px 2px 3px 3px #72c209;
 }
 
 .product-item input{
-    margin:13px;
+    margin:0px 13px;
     padding: 5px;
-    border: 2px solid rgb(234, 10, 241);
-    color: blueviolet;
+    border: 2px solid #72c209;
+    color: rgb(5, 136, 153);
     border-radius: 8px;
 }
 
 .product-item  .buy-button{
-    margin: 0 auto auto 37px;
+    margin: 4px auto auto 37px;
     width: 130px;
     padding: 8px;
     color: rgb(253, 253, 253);
     font-weight: bolder;
-    background-color: rgb(193, 2, 183);
+    background-color: #72c209;
     border: none;
     border-radius: 5px;
+}
+.product-item p{
+    text-align: center;
+    color: red;
+    font-size: 14px;
 }
 .search{
     position: absolute;
     top: 70px;
-    right: 260px;
-    height: 30px;
+    right:270px;
+    height: 43px;
     width: 800px;
 }
 .search input{
     height: 100%;
     width: 70%;
-    color: blueviolet;
+    color:  #72c209;
+    font-size: 17px;
 }
 .search button{
-    background-color:#fff;
-    color: blueviolet;
-    border: 2px solid rgb(193, 2, 183);;
+    background-color:rgb(5, 136, 153);
+    color: rgb(255, 255, 255);
+    border: 2px  solid #72c209;
     height: 120%;
-    box-shadow: 2px 1px  4px #fff;
+    box-shadow: 2px 1px 4px 3px #fff;
     cursor: pointer;
     transition: .4s ease;
     border-radius: 6px;
 }
 .search button:hover{
     transform: scale(1.1);
+    border: 2px  solid rgb(0, 240, 72);
 }
 
 .search .BACK{
-    background-color:#fff;
-    color: blueviolet;
-    border: 2px solid rgb(193, 2, 183);;
+   background-color:rgb(5, 136, 153);
+    color: rgb(255, 255, 255);
+    border: 2px  solid #72c209;
     height: 120%;
-    box-shadow: 2px 1px  4px #fff;
+    box-shadow: 2px 1px 4px 3px #fff;
     cursor: pointer;
     transition: .4s ease;
+    border-radius: 6px;
+}
+
+.hidden{
+    display: none;
+ 
+}
+.display{
+    display: block;
+    position: absolute;
+    top: 120px;
+    right:390px;
+    width: 550px;
+    height: 30px;
+    background-color: rgb(6, 155, 19);
+    color: #fff;
+    font-weight: bolder;
+    transition: .3s ease-out;
+    text-align: center;
+    border-radius: 10px;
 }

@@ -8,16 +8,17 @@
 .card{
 width: 20%;
 height: 50%;
-background-color:blueviolet;
+background-color: rgb(5, 136, 153);
 margin: auto;
 border-radius: 15px;
 overflow: hidden;
 box-shadow: 1px 2xp 0 1px #333;
 transition: .5s ease;
-border: 5px solid rgb(234, 10, 241);
+border: 5px solid #72c209;
 }
 .card:hover {
     transform: scale(1.1);
+    box-shadow: 1px 2px 4px 5px #fff;
 }
 .card img{
     width: 100%;
@@ -27,7 +28,7 @@ border: 5px solid rgb(234, 10, 241);
 
 .card h1 {
 text-align: center;
-color: rgb(187, 218, 9);
+color: #8ffa04;
 font-size: 30px;
 font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -35,7 +36,7 @@ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
     font-size: 20px;
     font-weight: bold;
-    color:rgb(187, 218, 9);
+    color:rgb(255, 255, 255);
 }
 .card:hover img {
     opacity: 0.7;

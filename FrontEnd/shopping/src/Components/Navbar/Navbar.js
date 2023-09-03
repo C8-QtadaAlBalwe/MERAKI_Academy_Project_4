@@ -12,8 +12,8 @@ const Navigation = () => {
   return (
     <>
       <div className="navbar">
-        <img src="https://www.360webdesigns.com/wp-content/uploads/2016/07/Services_ECommerce_v2-01.png" />
-        <h2>Shopping App</h2>
+        <img src="https://o.remove.bg/downloads/8f2110fb-c509-4b68-9e22-712e5790282f/R-removebg-preview.png" />
+        <h2><span>App..</span></h2>
         <div className="buttons-nav">
           <Link to="/Contact-Us" className="link">
             Contact-US
@@ -25,7 +25,7 @@ const Navigation = () => {
             <div className="divs-Bar">
               <h1>
               {firstName}
-                <Link to="/Profile"><img src="https://th.bing.com/th/id/R.07f6ad0ebaf84692e878826636c382c6?rik=29AibLxrmjAADg&pid=ImgRaw&r=0" /></Link>
+                <Link to="/Profile"><img src="https://th.bing.com/th/id/R.07f6ad0ebaf84692e878826636c382c6?rik=29AibLxrmjAADg&pid=ImgRaw&r=0"  title="Your Profile"/></Link>
                 
               </h1>
              
