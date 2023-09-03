@@ -57,7 +57,7 @@ cursor: pointer;
     border-left: 6px solid #72c209;
     border-right: 6px solid  #72c209;
     border-radius: 20px;
-    background-image: url("https://th.bing.com/th/id/R.ddbfcd34f28ce752a774ba2ae575f9d9?rik=idZSI4c1%2fxiMeQ&pid=ImgRaw&r=0");
+    background-image: url("https://th.bing.com/th/id/OIP.HNT5TZ-1GNRe5GcKZm6WSQHaE7?pid=ImgDet&rs=1");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -67,19 +67,19 @@ cursor: pointer;
     animation-iteration-count: infinite;
   }
   @keyframes photo{
-    10%{background-image: url("https://th.bing.com/th/id/OIP.utKdnIkgSaWuwhJE6ne3PwHaFU?pid=ImgDet&rs=1");background-repeat: no-repeat;
+    10%{background-image: url("https://svg-shop.com/wp-content/uploads/2019/06/Attire-Wholesale-Lots.jpg");background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    30%{background-image: url("https://assets.bigcartel.com/theme_images/25154108/996598-clothes.jpg?auto=format&fit=max&w=1500");background-repeat: no-repeat;
+    30%{background-image: url("https://th.bing.com/th/id/OIP.AOEs54PQ_NoVncU3Xf2PpgHaEK?pid=ImgDet&rs=1");background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    50%{background-image: url("https://th.bing.com/th/id/OIP.FXznUMA83bWEwudnH2acoAHaHa?pid=ImgDet&rs=1");background-repeat: no-repeat;
+    50%{background-image: url("https://i.pinimg.com/originals/2e/27/b3/2e27b349c642fba9a3743685ae00b413.jpg");background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    70%{background-image: url("https://thumbs.dreamstime.com/z/beautiful-shop-assistant-offers-clothes-to-customers-white-t-shirt-sunglasses-her-head-close-up-photo-good-choice-155953518.jpg");background-repeat: no-repeat;
+    70%{background-image: url("https://th.bing.com/th/id/OIP.JFtFP_gAigcAbcp6w7hyQQHaFj?pid=ImgDet&rs=1");background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
-    90%{background-image: url("https://th.bing.com/th/id/OIP.pfIg4vDJIhsEwjAKhL0kJgHaLu?pid=ImgDet&rs=1");background-repeat: no-repeat;
+    90%{background-image: url("https://th.bing.com/th/id/OIP.HNT5TZ-1GNRe5GcKZm6WSQHaE7?pid=ImgDet&rs=1");background-repeat: no-repeat;
         background-size: cover;
         background-position: center;}
   }
